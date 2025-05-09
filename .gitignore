@@ -1,21 +1,55 @@
-.gradle
+# ----------------------
+# Gradle
+# ----------------------
+.gradle/
 **/build/
-!src/**/build/
-
-# Ignore Gradle GUI config
 gradle-app.setting
-
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
-
-# Avoid ignore Gradle wrappper properties
-!gradle-wrapper.properties
-
-# Cache of project
 .gradletasknamecache
 
-# Eclipse Gradle plugin generated files
-# Eclipse Core
+# Mantenha o Gradle Wrapper
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+!gradlew
+!gradlew.bat
+
+# ----------------------
+# IDEs
+# ----------------------
+# Eclipse
 .project
-# JDT-specific (Eclipse Java Development Tools)
 .classpath
+.settings/
+bin/
+
+# IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# VSCode
+.vscode/
+
+# ----------------------
+# Java
+# ----------------------
+*.class
+*.jar
+*.war
+*.ear
+*.log
+*.ctxt
+target/
+build/
+# ----------------------
+# Logs/Temporários
+# ----------------------
+*.tmp
+*.swp
+*.swo
+
+# ----------------------
+# Sistema
+# ----------------------
+Thumbs.db
