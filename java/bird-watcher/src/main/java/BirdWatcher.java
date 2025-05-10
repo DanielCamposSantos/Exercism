@@ -8,27 +8,6 @@ class BirdWatcher {
     }
 
 
-    public static void main(String[] args) {
-        BirdWatcher birdWatcher = new BirdWatcher(new int[]{2, 5, 0, 7, 4, 1});
-
-
-        System.out.println(Arrays.toString(birdWatcher.getLastWeek()));
-
-        System.out.println("HOJE = " + birdWatcher.getToday());
-
-        System.out.println("AUMENTANDO HOJE");
-        birdWatcher.incrementTodaysCount();
-
-        System.out.println("HOJE = " + birdWatcher.getToday());
-
-
-        System.out.println("DIAS SEM PASSAROS = " + birdWatcher.hasDayWithoutBirds());
-
-        System.out.println();
-
-    }
-
-
     public int[] getLastWeek() {
         return new int[]{0, 2, 5, 3, 7, 8, 4};
     }
@@ -53,8 +32,12 @@ class BirdWatcher {
 
     public int getCountForFirstDays(int numberOfDays) {
         int birdCount = 0;
-        for (int i = 0; i < numberOfDays; i++) {
-            birdCount += birdsPerDay[i];
+
+        for (int i = 0; i < 7; i++) {
+            if (i < numberOfDays){
+                birdCount += birdsPerDay[i];
+
+            }
         }
         return birdCount;
     }
